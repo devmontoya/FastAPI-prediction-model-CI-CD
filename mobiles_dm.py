@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 
+
 # This class indicates the features of the entered data
 class Mobile(BaseModel):
     battery_power: int = Field(..., example=642)
@@ -22,6 +23,7 @@ class Mobile(BaseModel):
     three_g: int = Field(..., example=1)
     touch_screen: int = Field(..., example=1)
     wifi: int = Field(..., example=0)
+
 
 class Mobile_pd(BaseModel):
     id: int

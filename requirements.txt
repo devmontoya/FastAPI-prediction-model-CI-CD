@@ -6,3 +6,4 @@ joblib
 pandas
 sqlalchemy
 requests
+flake8
