@@ -27,12 +27,14 @@ jobs:
       - name: Run static code analysis with flake8
         run: |
           source venv/bin/activate
-          flake8 app.py mobiles_dm.py
+          flake8 ./app/main.py ./app/mobiles_dm.py
 
       - name: Run tests
         run: |
           source venv/bin/activate
-          uvicorn app:app --reload &
+          cd app
+          uvicorn main:app --port 4030 &
           echo "API started"
           sleep 5
-          python -m unittest tests/test_endpoint_API.py
+          cd ..
+          python -m unittest ./tests/test_endpoint_API.py

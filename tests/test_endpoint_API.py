@@ -27,15 +27,17 @@ data = [
   }
 ]
 
+port_app = 4030
+
 class TestMain(unittest.TestCase):
     def test_healthcheck(self):
-        response = requests.get('http://127.0.0.1:8000/healthcheck')
+        response = requests.get(f'http://127.0.0.1:{port_app}/healthcheck')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.content, b'true')
 
     def test_predict(self):
         """This test unit doesn't actually verify the request's result; it only checks that the API accepts input values and returns a response."""
-        response = requests.post('http://127.0.0.1:8000/predict', json=data)
+        response = requests.post(f'http://127.0.0.1:{port_app}/predict', json=data)
         self.assertEqual(response.status_code, 200)
 
         response_dict = json.loads(response.json())[0]
