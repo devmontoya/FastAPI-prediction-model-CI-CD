@@ -1,0 +1,22 @@
+{
+  "battery_power": 1454,
+  "blue": 1,
+  "clock_speed": 0.5,
+  "dual_sim": 1,
+  "fc": 1,
+  "four_g": 0,
+  "int_memory": 34,
+  "m_dep": 0.7,
+  "mobile_wt": 83,
+  "n_cores": 4,
+  "pc": 3,
+  "px_height": 250,
+  "px_width": 1033,
+  "ram": 3419,
+  "sc_h": 7,
+  "sc_w": 5,
+  "talk_time": 5,
+  "three_g": 1,
+  "touch_screen": 1,
+  "wifi": 0
+}

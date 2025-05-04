@@ -4,6 +4,7 @@ from mobiles_dm import Mobile, Mobile_pd
 from joblib import load
 import pandas as pd
 from copy import deepcopy
+from typing import Dict
 
 from sqlalchemy import create_engine, MetaData, Table, desc
 from sqlalchemy.orm import sessionmaker
@@ -36,7 +37,7 @@ classifier = load("./src/Pipelines/prange_ml_pipeline.joblib")
 
 
 @app.get('/')
-def index() -> str:
+def index() -> Dict[str, str]:
     return {'message': 'Go to /docs to view documentation'}
 
 
